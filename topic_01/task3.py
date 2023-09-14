@@ -3,7 +3,7 @@
 
 # x1 = (-b + sqrt(D))/2*a
 # x2 = (-b - sqrt(D))/2*a
-import math
+
 
 a = int(input("a : "))
 b = int(input("b: "))
@@ -17,4 +17,4 @@ def findD(a, b ,c):
 
 result = findD(a, b, c)
 
-print(findD(a, b, c))
+print(result)
