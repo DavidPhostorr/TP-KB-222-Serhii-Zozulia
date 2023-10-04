@@ -11,7 +11,8 @@ list = [
 ]
 
 def printAllList():
-    for elem in list:
+    sorted_list = sorted(list, key=lambda x: x["name"])
+    for elem in sorted_list:
         if isinstance(elem, dict):
             strForPrint = "Student name is " + elem["name"] + ",  Student surname is " + elem["surname"] + ",  Student age is " + elem["age"] + ",  Phone is " + elem["phone"]
             print(strForPrint)
