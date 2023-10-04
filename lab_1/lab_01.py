@@ -11,8 +11,7 @@ list = [
 ]
 
 def printAllList():
-    sorted_list = sorted(list, key=lambda x: x["name"])
-    for elem in sorted_list:
+    for elem in list:
         if isinstance(elem, dict):
             strForPrint = "Student name is " + elem["name"] + ",  Student surname is " + elem["surname"] + ",  Student age is " + elem["age"] + ",  Phone is " + elem["phone"]
             print(strForPrint)
@@ -57,21 +56,25 @@ def deleteElement():
 
 def updateElement():
     name = input("Please enter name to be updated: ")
-    name1 = input("Enter new name: ")
-    surname = input("Enter new surname: ")
-    age = input("Enter new age: ")
-    phone = input("Enter new phone: ")
-    newElement = {"name": name1, "surname" : surname, "age" : age, "phone": phone}
-    updateElem = -1
-    for item in list:
-        if name == item["name"]:
-            updateElem = list.index(item)
+    for index, elem in enumerate(list):
+        if name == elem["name"]:
+            name1 = input("Enter new name: ")
+            surname = input("Enter new surname: ")
+            age = input("Enter new age: ")
+            phone = input("Enter new phone: ")
+            newElement = {"name": name1, "surname" : surname, "age" : age, "phone": phone}
+            del list[index]
+            insertPos = 0
+            for pos, elem in enumerate(list):
+                if name1 > elem["name"]:
+                    insertPos = pos + 1
+                else:
+                    break
+            list.insert(insertPos, newElement)
+            print("Element has been updated")
             break
-    if updateElem == -1:
-        print("Element was not found")
-    else:
-        print("Update" + str(updateElem))
-    list[updateElem] = newElement
+        else:
+            print("Student not found")
      
      
 
