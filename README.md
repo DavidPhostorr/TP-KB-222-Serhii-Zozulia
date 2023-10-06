@@ -10,4 +10,7 @@ add solution for task1 task2 task3
 # 2023-10-04
 add folder lab_01
 add solution for lab_01
+# 2023-10-06
+add folder topic_02
+add solution for task1 task2
 # TP-KB-222-Serhii-Zozulia
