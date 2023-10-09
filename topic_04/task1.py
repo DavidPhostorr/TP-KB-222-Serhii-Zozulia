@@ -8,9 +8,12 @@ def multiply(x, y):
     return x * y
 
 def divide(x, y):
-    if y == 0:
+    return ZeroDivisionError(x,y)
+
+def ZeroDivisionError(x, y):
+    if x == 0 or y == 0:
         return "Impossible"
-    return x / y
+    return  x / y
 
 while True:
     print("Choose:")
@@ -26,9 +29,14 @@ while True:
         print("Leaving...")
         break
     
-    if choiсe in ('1','2','3','4'):
+    if choiсe in ('1','2','3'):
+    
         n1 = float(input("Enter first number: "))
         n2 = float(input("Enter second number: "))
+    else:
+        n1 = float(input("Enter first number: "))
+        n2 = float(input("Enter second number: "))
+
         
         if choiсe == '1':
             print("Result: ", add(n1,n2))
