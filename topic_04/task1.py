@@ -11,9 +11,12 @@ def divide(x, y):
     return ZeroDivisionError(x,y)
 
 def ZeroDivisionError(x, y):
-    if x == 0 or y == 0:
-        return "Impossible"
-    return  x / y
+    while True:
+        try:
+            if x == 0 or y == 0:
+                return "Impossible"
+        except ZeroDivisionError:
+            print("Impossible")
 
 def GetIntValue(promt):
     while True:
