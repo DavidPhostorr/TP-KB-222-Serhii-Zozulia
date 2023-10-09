@@ -15,6 +15,14 @@ def ZeroDivisionError(x, y):
         return "Impossible"
     return  x / y
 
+def GetIntValue(promt):
+    while True:
+        try:
+            x = float(input(promt))
+            return x
+        except ValueError:
+            print("Value error")
+
 while True:
     print("Choose:")
     print("1. Add")
@@ -29,13 +37,13 @@ while True:
         print("Leaving...")
         break
     
-    if choiсe in ('1','2','3'):
+    if choiсe in ('1','2','3','4'):
+        
+        n1 = GetIntValue("Enter first number: ")
+        n2 = GetIntValue("Enter second number: ")
     
-        n1 = float(input("Enter first number: "))
-        n2 = float(input("Enter second number: "))
-    else:
-        n1 = float(input("Enter first number: "))
-        n2 = float(input("Enter second number: "))
+    #    n1 = float(input("Enter first number: "))
+    #    n2 = float(input("Enter second number: "))
 
         
         if choiсe == '1':
