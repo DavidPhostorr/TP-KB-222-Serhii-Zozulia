@@ -16,4 +16,7 @@ add solution for task1 task2
 # 2023-10-13
 add folder topic_05
 add solution for task1 task2 task3
+# 2023-10-25
+add folder topic_06
+add solution for task1 task2
 # TP-KB-222-Serhii-Zozulia
