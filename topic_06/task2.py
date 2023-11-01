@@ -3,7 +3,7 @@ getMark = lambda student: student['Mark']
 
 students = []
 
-with open('D:/Навчання Політех/Другий курс/Програмування/TP-KB-222-Serhii-Zozulia/topic_06/students.txt', 'r') as file:
+with open('students.txt', 'r') as file:
     next(file)  # Пропускаємо перший рядок з заголовками
     for line in file:
         parts = line.strip().split(',')
