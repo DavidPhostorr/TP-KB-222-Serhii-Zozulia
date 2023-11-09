@@ -8,8 +8,8 @@ add solution for task1 task2
 add folder topic_03
 add solution for task1 task2 task3
 # 2023-10-04
-add folder lab_01
-add solution for lab_01
+add folder Lab_01
+add solution for Lab_01
 # 2023-10-06
 add folder topic_04
 add solution for task1 task2
