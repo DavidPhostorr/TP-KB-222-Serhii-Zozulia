@@ -1,5 +1,3 @@
-# main.py
-
 from students import Student
 from ListStudent import StudentList
 from Utils import Utils
