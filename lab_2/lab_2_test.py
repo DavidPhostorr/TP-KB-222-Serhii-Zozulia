@@ -11,8 +11,8 @@ class TestYourScript(unittest.TestCase):
     def setUp(self):
         self.test_file = "test_data.csv"
         self.test_data = [
-            {"name": "John", "phone": "123-456-7890", "age": "25", "email": "john@example.com"},
-            {"name": "Jane", "phone": "987-654-3210", "age": "30", "email": "jane@example.com"}
+            {"name": "Jane", "phone": "123-456-7890", "age": "25", "email": "john@example.com"},
+            {"name": "John", "phone": "987-654-3210", "age": "30", "email": "jane@example.com"}
         ]
 
     def tearDown(self):
