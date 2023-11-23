@@ -101,6 +101,14 @@ def saveCSV(fname):
     
 
 def main():
+
+    if len(sys.argv) != 2:
+        print("Use: python script.py 'file_name'")
+        raise SystemExit(1)
+        
+    fname = sys.argv[1]
+    list = addCSV(fname)
+
     while True:
         chouse = input("Please specify the action [ C create, U update, D delete, P print, E exec, S save, X exit ] ")
         match chouse:
