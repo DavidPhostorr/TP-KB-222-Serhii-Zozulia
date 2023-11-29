@@ -16,7 +16,7 @@ def Response(input):
     stack = []
     output = []
     
-    for token in input.split(' '):
+    for token in input:
         if Ncheck(token):
             output.append(token)
             continue
@@ -70,7 +70,7 @@ def mat(respons):
     
     
 if __name__ == '__main__':
-    input = "3 + 4 * 2 / ( 1 - 5 ) ^ 2"
+    input = "3+4*2/(1-5)^2"
     respons = Response(input)
     
     print("Reverse: ", respons)
