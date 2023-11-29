@@ -35,8 +35,8 @@ class TestStudentList(unittest.TestCase):
         self.assertEqual(updated_student.phone, "987654321")
 
     def test_str_representation(self):
-        student1 = Student("John", "Doe", 25, "123456789")
-        student2 = Student("Jane", "Smith", 30, "987654321")
+        student1 = Student("Jane", "Doe", 25, "123456789")
+        student2 = Student("John", "Smith", 30, "987654321")
 
         self.student_list.Studentadd(student1)
         self.student_list.Studentadd(student2)
