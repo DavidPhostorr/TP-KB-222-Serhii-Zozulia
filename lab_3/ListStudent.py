@@ -5,8 +5,18 @@ class StudentList:
         self.students = []
 
     def Studentadd(self, student):
-        self.students.append(student)
-
+        #self.students.append(student)
+        if self.students == []:
+            self.students.append(student)
+        else:
+            insertPosition = 0 
+            for st in self.students:
+                if student.name > st.name:
+                    insertPosition += 1
+                else:
+                    break
+            self.students.insert(insertPosition, student)
+                
     def Studentremove(self, name):
         self.students = [s for s in self.students if s.name != name]
 
