@@ -1,11 +1,7 @@
 import csv
+import sys
 
-list = [
-    {"name":"Bob", "surname": "Bobchenko", "age" : "17", "phone":"0631234567"},
-    {"name":"Emma", "surname": "Emchenko", "age" : "18", "phone":"0631234567"},
-    {"name":"Jon", "surname": "Jonchenko", "age" : "16", "phone":"0631234567"},
-    {"name":"Zak", "surname": "Zakchenko", "age" : "19", "phone":"0631234567"}
-]
+list = []
 
 def printAllList():
     for elem in list:
@@ -101,10 +97,9 @@ def saveCSV(fname):
     
 
 def main():
-
     if len(sys.argv) != 2:
-        print("Use: python script.py 'file_name'")
-        raise SystemExit(1)
+        print("Use: pyton scripy.py 'file_name' ")
+        sys.exit(1)
         
     fname = sys.argv[1]
     list = addCSV(fname)
