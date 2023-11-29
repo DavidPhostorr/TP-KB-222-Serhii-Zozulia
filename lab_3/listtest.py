@@ -41,8 +41,8 @@ class TestStudentList(unittest.TestCase):
         self.student_list.Studentadd(student1)
         self.student_list.Studentadd(student2)
 
-        expected_output = "Student name is John, Student surname is Doe, Student age is 25, Phone is 123456789\n" \
-                          "Student name is Jane, Student surname is Smith, Student age is 30, Phone is 987654321"
+        expected_output = "Student name is Jane, Student surname is Smith, Student age is 30, Phone is 987654321\n" \
+                          "Student name is John, Student surname is Doe, Student age is 25, Phone is 123456789"
         self.assertEqual(str(self.student_list), expected_output)
 
 if __name__ == '__main__':
