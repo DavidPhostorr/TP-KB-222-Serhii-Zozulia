@@ -40,14 +40,19 @@ class TestYourScript(unittest.TestCase):
         with patch('sys.stdout', new_callable=io.StringIO) as mock_stdout:
             printAllList(studentList)
             output = mock_stdout.getvalue()
-            self.assertIn("John", output)
             self.assertIn("Jane", output)
+            self.assertIn("John", output)
 
     def test_addNewElement(self):
         studentList = self.test_data
         with patch('builtins.input', side_effect=["New Student", "555-555-5555", "22", "new@student.com"]):
             addNewElement(studentList)
             self.assertEqual(len(studentList), 3)
+            new_student = studentList[-1]     
+            self.assertEqual(new_student['name'], "New Student")      
+            self.assertEqual(new_student['phone'], "555-555-5555")       
+            self.assertEqual(new_student['age'], 22)    
+            self.assertEqual(new_student['email'], "new@student.com")
 
     def test_deleteElement(self):
         studentList = self.test_data
