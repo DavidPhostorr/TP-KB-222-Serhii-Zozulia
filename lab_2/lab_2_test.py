@@ -5,7 +5,6 @@ import csv
 from unittest.mock import patch
 
 from lab_2 import *
-from lab_2.lab_2 import addCSV, addNewElement, deleteElement, printAllList, saveCSV, updateElement
 
 class TestYourScript(unittest.TestCase):
     def setUp(self):
